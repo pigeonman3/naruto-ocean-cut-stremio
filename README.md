@@ -18,7 +18,7 @@ The Ocean Cut is a fanmade re-edit of the Naruto TV anime that aims to re-envisi
 - ✅ Important Japanese text translated
 - ✅ Flashbacks removed unless necessary
 - ✅ Music and VA edited to avoid jarring cuts
-- ✅ **95 episodes** total (vs 220 original series episodes)
+- ✅ **101 videos** total (91 main episodes, 4 epilogue, 6 specials) (vs 220 original series episodes)
 
 ## Installation
 
@@ -45,7 +45,7 @@ The Ocean Cut is a fanmade re-edit of the Naruto TV anime that aims to re-envisi
 
 ## Episode List
 
-The addon includes **95 episodes** organized across multiple seasons:
+The addon includes **101 videos** organized across multiple seasons:
 
 - **Season 0**: Land of Waves (Episodes 1-5 + Special)
 - **Season 1**: Chunin Exams (Episodes 6-17 + Special)

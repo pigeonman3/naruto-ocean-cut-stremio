@@ -1,16 +1,23 @@
 const fs = require('fs');
 const path = require('path');
 
-// Torrent info
-const TORRENT_HASH = 'E0C38EDE05E555D337E7D534F4EAAEBC773BF913'; // Uppercase for better compatibility
+// Torrent info. Stremio expects a lowercase hex info hash.
+const TORRENT_HASH = 'e0c38ede05e555d337e7d534f4eaaebc773bf913';
 const UPLOAD_DATE = '2022-04-13T00:00:00.000Z';
+const POSTER = 'https://i.imgur.com/JprF6ks.png';
+
+// Extra trackers help Stremio find peers quickly instead of relying on DHT alone.
+const TRACKERS = [
+  'udp://tracker.opentrackr.org:1337/announce',
+  'udp://open.stealth.si:80/announce',
+  'udp://tracker.torrent.eu.org:451/announce',
+  'udp://exodus.desync.com:6969/announce',
+  'udp://open.demonii.com:1337/announce',
+  'udp://tracker.dler.org:6969/announce',
+];
 
 // Episode to season mapping based on episode numbers
-function getSeasonForEpisode(episodeNum, isEpilogue = false, isSpecial = false) {
-  if (isSpecial) return 0; // All specials go to Season 0
-  if (isEpilogue) return 20; // Epilogue episodes go to Season 20
-  
-  // Regular episode mapping
+function getSeasonForEpisode(episodeNum) {
   if (episodeNum >= 1 && episodeNum <= 5) return 1;    // Land of Waves
   if (episodeNum >= 6 && episodeNum <= 17) return 2;   // Chunin Exams
   if (episodeNum >= 18 && episodeNum <= 21) return 3;  // Search for Hope
@@ -30,9 +37,14 @@ function getSeasonForEpisode(episodeNum, isEpilogue = false, isSpecial = false) 
   if (episodeNum >= 80 && episodeNum <= 86) return 17; // Hell
   if (episodeNum >= 87 && episodeNum <= 88) return 18; // Realm of Infinity
   if (episodeNum >= 89 && episodeNum <= 91) return 19; // Finale
-  
-  return 0; // Default to Season 0 for anything else
+  throw new Error(`No season mapping for episode ${episodeNum}`);
 }
+
+// Specials all live in Season 0 ("Specials" in Stremio) with unique episode numbers.
+// Kakashi's Story follows the four specials.
+const KAKASHI_OFFSET = 4;
+const EPILOGUE_SEASON = 20;
+const FINAL_EPISODE_NUMBER = 4; // "Naruto The Final Episode" closes out the epilogue
 
 // File list from the torrent (in order as they appear)
 const fileList = [
@@ -98,7 +110,7 @@ const fileList = [
   { index: 59, path: 'Season 10 - Pain/Naruto Episode 55 - The Hero of the Leaf_1.mp4' },
   { index: 60, path: 'Season 10 - Pain/Naruto Episode 56 - The Tale Of Naruto Uzumaki-1.m4v' },
   { index: 61, path: 'Season 11 - Kage Summit/Naruto Episode 57 - Rising Tensions.mp4' },
-  { index: 62, path: 'Season 11 - Kage Summit/Naruto Episode 58 - The Summit.m4v' },
+  { index: 62, path: 'Season 11 - Kage Summit/Naruto Episode 58  - The Summit.m4v' },
   { index: 63, path: 'Season 11 - Kage Summit/Naruto Episode 59 - Racing Minds.mp4' },
   { index: 64, path: 'Season 11 - Kage Summit/Naruto Episode 60 - The Power of the Elder.mp4' },
   { index: 65, path: 'Season 11 - Kage Summit/Naruto Episode 61 - High-Level Shinobi.mp4' },
@@ -142,41 +154,58 @@ const fileList = [
   { index: 103, path: 'Special Season - Kakashi\'s Story/When to watch.txt' }, // Skip
 ];
 
-// Parse episode information
+// "Season 13 - The War" -> "The War"
+function arcName(filePath) {
+  return filePath.split('/')[0].replace(/^(Special )?Season( \d+)? - /, '').trim();
+}
+
+function cleanTitle(raw) {
+  return raw.replace(/(?:-1|_1)$/, '').trim();
+}
+
+// Parse episode information from a torrent file path
 function parseEpisode(filePath, fileIndex) {
-  // Skip non-video files
-  if (!filePath.endsWith('.mp4') && !filePath.endsWith('.m4v')) {
-    return null;
+  const name = path.basename(filePath);
+  const ext = path.extname(name).toLowerCase();
+  if (ext !== '.mp4' && ext !== '.m4v') return null;
+  const base = name.slice(0, -ext.length);
+  const arc = arcName(filePath);
+
+  let season, episode, title, m;
+
+  if ((m = base.match(/^Naruto Episode (\d+)\s+-\s+(.+)$/))) {
+    episode = parseInt(m[1], 10);
+    season = getSeasonForEpisode(episode);
+    title = cleanTitle(m[2]);
+  } else if ((m = base.match(/^Naruto Epilogue Episode (\d+)\s+-\s+(.+)$/))) {
+    season = EPILOGUE_SEASON;
+    episode = parseInt(m[1], 10);
+    title = cleanTitle(m[2]);
+  } else if (/^Naruto The Final Episode/.test(base)) {
+    season = EPILOGUE_SEASON;
+    episode = FINAL_EPISODE_NUMBER;
+    title = 'The Final Episode';
+  } else if ((m = base.match(/^Special #(\d+)\s+-\s+(.+)$/i))) {
+    season = 0;
+    episode = parseInt(m[1], 10);
+    title = `Special #${m[1]}: ${cleanTitle(m[2])}`;
+  } else if ((m = base.match(/^Kakashi's Story Episode (\d+)\s+[-–]\s+(.+)$/))) {
+    season = 0;
+    episode = KAKASHI_OFFSET + parseInt(m[1], 10);
+    title = `Kakashi's Story ${m[1]}: ${cleanTitle(m[2])}`;
+  } else {
+    throw new Error(`Unrecognised video file name: ${filePath}`);
   }
-
-  const match = filePath.match(/(?:Naruto (?:Episode|Epilogue Episode)|SPECIAL #|Kakashi's Story Episode) (\d+|#\d+) - (.+?)(?:-\d+)?\.(?:mp4|m4v)/);
-  
-  if (!match) return null;
-
-  let episodeNum = match[1];
-  let title = match[2].trim();
-  
-  // Detect episode type
-  const isEpilogue = filePath.includes('Epilogue');
-  const isSpecial = filePath.includes('SPECIAL #') || filePath.includes('Kakashi\'s Story');
-  
-  // Handle special episodes
-  if (episodeNum.startsWith('#')) {
-    episodeNum = episodeNum.substring(1);
-  }
-
-  // Determine season using the mapping function
-  const season = getSeasonForEpisode(parseInt(episodeNum), isEpilogue, isSpecial);
-  
-  const id = `naruto_${season}_${episodeNum}`;
 
   return {
-    id,
+    id: `naruto_${season}_${episode}`,
     season,
-    episode: parseInt(episodeNum),
+    episode,
     title,
+    arc,
     fileIndex,
-    released: UPLOAD_DATE
+    filename: name,
+    released: UPLOAD_DATE,
   };
 }
 
@@ -184,68 +213,65 @@ function parseEpisode(filePath, fileIndex) {
 const episodes = fileList
   .map(f => parseEpisode(f.path, f.index))
   .filter(e => e !== null)
-  .sort((a, b) => {
-    if (a.season !== b.season) return a.season - b.season;
-    return a.episode - b.episode;
-  });
+  .sort((a, b) => (a.season - b.season) || (a.episode - b.episode));
+
+const seen = new Set();
+for (const ep of episodes) {
+  if (seen.has(ep.id)) throw new Error(`Duplicate episode id ${ep.id}`);
+  seen.add(ep.id);
+}
 
 console.log(`Parsed ${episodes.length} episodes`);
+
+const root = path.join(__dirname, '..');
+const writeJson = (rel, data) => {
+  const file = path.join(root, rel);
+  fs.mkdirSync(path.dirname(file), { recursive: true });
+  fs.writeFileSync(file, JSON.stringify(data, null, 2) + '\n');
+};
 
 // Generate manifest.json
 const manifest = {
   id: 'com.narutooc.stremio',
-  version: '1.0.0',
+  version: '1.1.0',
   name: 'Naruto Ocean Cut',
   description: 'Fan-edited version of Naruto (2002) with no filler, streamlined pacing, and improved flow. English dub.',
-  logo: 'https://i.imgur.com/JprF6ks.png',
+  logo: POSTER,
   resources: [
     'catalog',
-    {
-      name: 'meta',
-      types: ['series']
-    },
-    'stream'
+    { name: 'meta', types: ['series'], idPrefixes: ['narutooc'] },
+    { name: 'stream', types: ['series'], idPrefixes: ['naruto_'] },
   ],
   types: ['series'],
+  idPrefixes: ['narutooc', 'naruto_'],
   catalogs: [
     {
       type: 'series',
       id: 'narutooc_catalog',
       name: 'Naruto Ocean Cut',
-      extra: [
-        {
-          name: 'search',
-          isRequired: false
-        }
-      ]
-    }
-  ]
+      extra: [{ name: 'search', isRequired: false }],
+    },
+  ],
 };
 
-fs.writeFileSync(
-  path.join(__dirname, '../manifest.json'),
-  JSON.stringify(manifest, null, 2)
-);
+writeJson('manifest.json', manifest);
 console.log('✓ Generated manifest.json');
 
 // Generate catalog
-const catalog = {
+const description = 'Naruto Ocean Cut is a fan-edited version of the original Naruto anime series that removes filler content, excessive flashbacks, and unnecessary padding for a streamlined viewing experience.';
+
+writeJson('catalog/series/narutooc_catalog.json', {
   metas: [
     {
       type: 'series',
       id: 'narutooc',
       name: 'Naruto Ocean Cut',
-      poster: 'https://i.imgur.com/JprF6ks.png',
+      poster: POSTER,
       genres: ['Animation', 'Action', 'Adventure', 'Fantasy'],
-      description: 'Naruto Ocean Cut is a fan-edited version of the original Naruto anime series that removes filler content, excessive flashbacks, and unnecessary padding for a streamlined viewing experience.'
-    }
-  ]
-};
-
-fs.writeFileSync(
-  path.join(__dirname, '../catalog/series/narutooc_catalog.json'),
-  JSON.stringify(catalog, null, 2)
-);
+      description,
+    },
+  ],
+});
 console.log('✓ Generated catalog');
 
 // Generate meta with all episodes
@@ -255,56 +281,46 @@ const videos = episodes.map(ep => ({
   id: ep.id,
   title: ep.title,
   released: ep.released,
-  overview: `Episode ${ep.episode} of Naruto Ocean Cut - ${ep.title}`
+  overview: `${ep.arc} arc - ${ep.title}`,
 }));
 
-const meta = {
+writeJson('meta/series/narutooc.json', {
   meta: {
     id: 'narutooc',
     type: 'series',
     name: 'Naruto Ocean Cut',
-    poster: 'https://i.imgur.com/JprF6ks.png',
-    background: 'https://i.imgur.com/JprF6ks.png',
+    poster: POSTER,
+    background: POSTER,
+    logo: POSTER,
     genres: ['Animation', 'Action', 'Adventure', 'Fantasy'],
-    description: 'Naruto Ocean Cut is a fan-edited version of the original Naruto anime series that removes filler content, excessive flashbacks, and unnecessary padding for a streamlined viewing experience. Features English dub audio with re-edited pacing to match the manga.',
-    videos
-  }
-};
-
-fs.writeFileSync(
-  path.join(__dirname, '../meta/series/narutooc.json'),
-  JSON.stringify(meta, null, 2)
-);
+    description: `${description} Features English dub audio with re-edited pacing to match the manga.`,
+    videos,
+  },
+});
 console.log('✓ Generated meta with', videos.length, 'episodes');
 
-// Generate stream files for each episode
-const streamDir = path.join(__dirname, '../stream/series');
-if (!fs.existsSync(streamDir)) {
-  fs.mkdirSync(streamDir, { recursive: true });
-}
+// Generate stream files for each episode (clear out stale files first)
+const streamDir = path.join(root, 'stream/series');
+fs.rmSync(streamDir, { recursive: true, force: true });
+fs.mkdirSync(streamDir, { recursive: true });
 
 episodes.forEach(ep => {
-  const stream = {
+  writeJson(`stream/series/${ep.id}.json`, {
     streams: [
       {
+        name: 'Ocean Cut',
+        title: `${ep.filename}\n🌊 Naruto Ocean Cut · English dub`,
         infoHash: TORRENT_HASH,
         fileIdx: ep.fileIndex,
-        title: `🌊 Ocean Cut\n📦 Torrent`,
-        sources: [
-          'tracker:udp://tracker.opentrackr.org:1337/announce',
-          'dht:' + TORRENT_HASH
-        ]
-      }
-    ]
-  };
-
-  fs.writeFileSync(
-    path.join(streamDir, `${ep.id}.json`),
-    JSON.stringify(stream, null, 2)
-  );
+        sources: [...TRACKERS.map(t => `tracker:${t}`), `dht:${TORRENT_HASH}`],
+        behaviorHints: {
+          bingeGroup: 'narutooc-oceancut',
+          filename: ep.filename,
+        },
+      },
+    ],
+  });
 });
 
 console.log(`✓ Generated ${episodes.length} stream files`);
 console.log('\n✅ Addon generation complete!');
-console.log(`\nTo deploy: Host the naruto-ocean-cut-stremio folder on GitHub Pages or any static host.`);
-console.log(`Manifest URL will be: https://yourdomain.com/manifest.json`);

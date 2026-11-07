@@ -5,6 +5,7 @@
     "name": "Naruto Ocean Cut",
     "poster": "https://i.imgur.com/JprF6ks.png",
     "background": "https://i.imgur.com/JprF6ks.png",
+    "logo": "https://i.imgur.com/JprF6ks.png",
     "genres": [
       "Animation",
       "Action",
@@ -15,11 +16,51 @@
     "videos": [
       {
         "season": 0,
+        "episode": 1,
+        "id": "naruto_0_1",
+        "title": "Special #1: Inari's Test of Courage",
+        "released": "2022-04-13T00:00:00.000Z",
+        "overview": "Land of Waves arc - Special #1: Inari's Test of Courage"
+      },
+      {
+        "season": 0,
         "episode": 2,
         "id": "naruto_0_2",
-        "title": "Jonin Leader",
+        "title": "Special #2: Kakashi's Face!",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 2 of Naruto Ocean Cut - Jonin Leader"
+        "overview": "Chunin Exams arc - Special #2: Kakashi's Face!"
+      },
+      {
+        "season": 0,
+        "episode": 3,
+        "id": "naruto_0_3",
+        "title": "Special #3: Boy on the Battlefield",
+        "released": "2022-04-13T00:00:00.000Z",
+        "overview": "Retrieval Mission arc - Special #3: Boy on the Battlefield"
+      },
+      {
+        "season": 0,
+        "episode": 4,
+        "id": "naruto_0_4",
+        "title": "Special #4: Boyhood",
+        "released": "2022-04-13T00:00:00.000Z",
+        "overview": "Finale arc - Special #4: Boyhood"
+      },
+      {
+        "season": 0,
+        "episode": 5,
+        "id": "naruto_0_5",
+        "title": "Kakashi's Story 1: A Mask That Hides The Heart",
+        "released": "2022-04-13T00:00:00.000Z",
+        "overview": "Kakashi's Story arc - Kakashi's Story 1: A Mask That Hides The Heart"
+      },
+      {
+        "season": 0,
+        "episode": 6,
+        "id": "naruto_0_6",
+        "title": "Kakashi's Story 2: Jonin Leader",
+        "released": "2022-04-13T00:00:00.000Z",
+        "overview": "Kakashi's Story arc - Kakashi's Story 2: Jonin Leader"
       },
       {
         "season": 1,
@@ -27,7 +68,7 @@
         "id": "naruto_1_1",
         "title": "Enter Naruto Uzumaki!",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 1 of Naruto Ocean Cut - Enter Naruto Uzumaki!"
+        "overview": "Land of Waves arc - Enter Naruto Uzumaki!"
       },
       {
         "season": 1,
@@ -35,7 +76,7 @@
         "id": "naruto_1_2",
         "title": "Journey To The Land Of Waves!",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 2 of Naruto Ocean Cut - Journey To The Land Of Waves!"
+        "overview": "Land of Waves arc - Journey To The Land Of Waves!"
       },
       {
         "season": 1,
@@ -43,7 +84,7 @@
         "id": "naruto_1_3",
         "title": "The Forest of Chakra",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 3 of Naruto Ocean Cut - The Forest of Chakra"
+        "overview": "Land of Waves arc - The Forest of Chakra"
       },
       {
         "season": 1,
@@ -51,7 +92,7 @@
         "id": "naruto_1_4",
         "title": "Hakus Secret Jutsu!",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 4 of Naruto Ocean Cut - Hakus Secret Jutsu!"
+        "overview": "Land of Waves arc - Hakus Secret Jutsu!"
       },
       {
         "season": 1,
@@ -59,7 +100,7 @@
         "id": "naruto_1_5",
         "title": "White Past, Hidden Ambition",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 5 of Naruto Ocean Cut - White Past, Hidden Ambition"
+        "overview": "Land of Waves arc - White Past, Hidden Ambition"
       },
       {
         "season": 2,
@@ -67,7 +108,7 @@
         "id": "naruto_2_6",
         "title": "A new Chapter begins!",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 6 of Naruto Ocean Cut - A new Chapter begins!"
+        "overview": "Chunin Exams arc - A new Chapter begins!"
       },
       {
         "season": 2,
@@ -75,7 +116,7 @@
         "id": "naruto_2_7",
         "title": "Genin Takedown!",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 7 of Naruto Ocean Cut - Genin Takedown!"
+        "overview": "Chunin Exams arc - Genin Takedown!"
       },
       {
         "season": 2,
@@ -83,7 +124,7 @@
         "id": "naruto_2_8",
         "title": "The Forest of Death",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 8 of Naruto Ocean Cut - The Forest of Death"
+        "overview": "Chunin Exams arc - The Forest of Death"
       },
       {
         "season": 2,
@@ -91,7 +132,7 @@
         "id": "naruto_2_9",
         "title": "Sakura Blossoms, Sasuke Awakens!",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 9 of Naruto Ocean Cut - Sakura Blossoms, Sasuke Awakens!"
+        "overview": "Chunin Exams arc - Sakura Blossoms, Sasuke Awakens!"
       },
       {
         "season": 2,
@@ -99,7 +140,7 @@
         "id": "naruto_2_10",
         "title": "Preliminary Persistence",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 10 of Naruto Ocean Cut - Preliminary Persistence"
+        "overview": "Chunin Exams arc - Preliminary Persistence"
       },
       {
         "season": 2,
@@ -107,7 +148,7 @@
         "id": "naruto_2_11",
         "title": "Top Dog",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 11 of Naruto Ocean Cut - Top Dog"
+        "overview": "Chunin Exams arc - Top Dog"
       },
       {
         "season": 2,
@@ -115,7 +156,7 @@
         "id": "naruto_2_12",
         "title": "Splendid Ninja",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 12 of Naruto Ocean Cut - Splendid Ninja"
+        "overview": "Chunin Exams arc - Splendid Ninja"
       },
       {
         "season": 2,
@@ -123,7 +164,7 @@
         "id": "naruto_2_13",
         "title": "Naruto's Hardest Training Yet!",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 13 of Naruto Ocean Cut - Naruto's Hardest Training Yet!"
+        "overview": "Chunin Exams arc - Naruto's Hardest Training Yet!"
       },
       {
         "season": 2,
@@ -131,7 +172,7 @@
         "id": "naruto_2_14",
         "title": "The Final Rounds Begin!",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 14 of Naruto Ocean Cut - The Final Rounds Begin!"
+        "overview": "Chunin Exams arc - The Final Rounds Begin!"
       },
       {
         "season": 2,
@@ -139,7 +180,7 @@
         "id": "naruto_2_15",
         "title": "Dancing Leaf, Squirming Sand!",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 15 of Naruto Ocean Cut - Dancing Leaf, Squirming Sand!"
+        "overview": "Chunin Exams arc - Dancing Leaf, Squirming Sand!"
       },
       {
         "season": 2,
@@ -147,7 +188,7 @@
         "id": "naruto_2_16",
         "title": "Zero Hour!",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 16 of Naruto Ocean Cut - Zero Hour!"
+        "overview": "Chunin Exams arc - Zero Hour!"
       },
       {
         "season": 2,
@@ -155,7 +196,7 @@
         "id": "naruto_2_17",
         "title": "Beyond Darkness And Light",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 17 of Naruto Ocean Cut - Beyond Darkness And Light"
+        "overview": "Chunin Exams arc - Beyond Darkness And Light"
       },
       {
         "season": 3,
@@ -163,7 +204,7 @@
         "id": "naruto_3_18",
         "title": "The Morning Mist",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 18 of Naruto Ocean Cut - The Morning Mist"
+        "overview": "Search for Hope arc - The Morning Mist"
       },
       {
         "season": 3,
@@ -171,7 +212,7 @@
         "id": "naruto_3_19",
         "title": "A New Training Begins!",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 19 of Naruto Ocean Cut - A New Training Begins!"
+        "overview": "Search for Hope arc - A New Training Begins!"
       },
       {
         "season": 3,
@@ -179,7 +220,7 @@
         "id": "naruto_3_20",
         "title": "The Necklace of Death!",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 20 of Naruto Ocean Cut - The Necklace of Death!"
+        "overview": "Search for Hope arc - The Necklace of Death!"
       },
       {
         "season": 3,
@@ -187,7 +228,7 @@
         "id": "naruto_3_21",
         "title": "Breakdown!",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 21 of Naruto Ocean Cut - Breakdown!"
+        "overview": "Search for Hope arc - Breakdown!"
       },
       {
         "season": 4,
@@ -195,7 +236,7 @@
         "id": "naruto_4_22",
         "title": "Patients",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 22 of Naruto Ocean Cut - Patients"
+        "overview": "Retrieval Mission arc - Patients"
       },
       {
         "season": 4,
@@ -203,7 +244,7 @@
         "id": "naruto_4_23",
         "title": "Comrades",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 23 of Naruto Ocean Cut - Comrades"
+        "overview": "Retrieval Mission arc - Comrades"
       },
       {
         "season": 4,
@@ -211,7 +252,7 @@
         "id": "naruto_4_24",
         "title": "Opponents",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 24 of Naruto Ocean Cut - Opponents"
+        "overview": "Retrieval Mission arc - Opponents"
       },
       {
         "season": 4,
@@ -219,7 +260,7 @@
         "id": "naruto_4_25",
         "title": "Warriors",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 25 of Naruto Ocean Cut - Warriors"
+        "overview": "Retrieval Mission arc - Warriors"
       },
       {
         "season": 4,
@@ -227,7 +268,7 @@
         "id": "naruto_4_26",
         "title": "Allies",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 26 of Naruto Ocean Cut - Allies"
+        "overview": "Retrieval Mission arc - Allies"
       },
       {
         "season": 4,
@@ -235,7 +276,7 @@
         "id": "naruto_4_27",
         "title": "Brothers",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 27 of Naruto Ocean Cut - Brothers"
+        "overview": "Retrieval Mission arc - Brothers"
       },
       {
         "season": 4,
@@ -243,7 +284,7 @@
         "id": "naruto_4_28",
         "title": "Friends",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 28 of Naruto Ocean Cut - Friends"
+        "overview": "Retrieval Mission arc - Friends"
       },
       {
         "season": 5,
@@ -251,7 +292,7 @@
         "id": "naruto_5_29",
         "title": "Homecoming",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 29 of Naruto Ocean Cut - Homecoming"
+        "overview": "Kazekage Rescue arc - Homecoming"
       },
       {
         "season": 5,
@@ -259,7 +300,7 @@
         "id": "naruto_5_30",
         "title": "Team Kakashi, Deployed",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 30 of Naruto Ocean Cut - Team Kakashi, Deployed"
+        "overview": "Kazekage Rescue arc - Team Kakashi, Deployed"
       },
       {
         "season": 5,
@@ -267,7 +308,7 @@
         "id": "naruto_5_31",
         "title": "A Meeting with Destiny",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 31 of Naruto Ocean Cut - A Meeting with Destiny"
+        "overview": "Kazekage Rescue arc - A Meeting with Destiny"
       },
       {
         "season": 5,
@@ -275,7 +316,7 @@
         "id": "naruto_5_32",
         "title": "The Secret of Jinchuriki",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 32 of Naruto Ocean Cut - The Secret of Jinchuriki"
+        "overview": "Kazekage Rescue arc - The Secret of Jinchuriki"
       },
       {
         "season": 5,
@@ -283,7 +324,7 @@
         "id": "naruto_5_33",
         "title": "Kunoichi vs The Puppetmaster",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 33 of Naruto Ocean Cut - Kunoichi vs The Puppetmaster"
+        "overview": "Kazekage Rescue arc - Kunoichi vs The Puppetmaster"
       },
       {
         "season": 5,
@@ -291,7 +332,7 @@
         "id": "naruto_5_34",
         "title": "Legacy",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 34 of Naruto Ocean Cut - Legacy"
+        "overview": "Kazekage Rescue arc - Legacy"
       },
       {
         "season": 6,
@@ -299,7 +340,7 @@
         "id": "naruto_6_35",
         "title": "The New Target",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 35 of Naruto Ocean Cut - The New Target"
+        "overview": "Tenchi Bridge Investigation arc - The New Target"
       },
       {
         "season": 6,
@@ -307,7 +348,7 @@
         "id": "naruto_6_36",
         "title": "The Tenchi Bridge",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 36 of Naruto Ocean Cut - The Tenchi Bridge"
+        "overview": "Tenchi Bridge Investigation arc - The Tenchi Bridge"
       },
       {
         "season": 6,
@@ -315,7 +356,7 @@
         "id": "naruto_6_37",
         "title": "Blank Page",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 37 of Naruto Ocean Cut - Blank Page"
+        "overview": "Tenchi Bridge Investigation arc - Blank Page"
       },
       {
         "season": 6,
@@ -323,7 +364,7 @@
         "id": "naruto_6_38",
         "title": "Reunion",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 38 of Naruto Ocean Cut - Reunion"
+        "overview": "Tenchi Bridge Investigation arc - Reunion"
       },
       {
         "season": 7,
@@ -331,7 +372,7 @@
         "id": "naruto_7_39",
         "title": "The Quietly Approaching Threat",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 39 of Naruto Ocean Cut - The Quietly Approaching Threat"
+        "overview": "Akatsuki Suppression arc - The Quietly Approaching Threat"
       },
       {
         "season": 7,
@@ -339,7 +380,7 @@
         "id": "naruto_7_40",
         "title": "Akatsuki Investigation",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 40 of Naruto Ocean Cut - Akatsuki Investigation"
+        "overview": "Akatsuki Suppression arc - Akatsuki Investigation"
       },
       {
         "season": 7,
@@ -347,7 +388,7 @@
         "id": "naruto_7_41",
         "title": "Climbing Silver",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 41 of Naruto Ocean Cut - Climbing Silver"
+        "overview": "Akatsuki Suppression arc - Climbing Silver"
       },
       {
         "season": 7,
@@ -355,7 +396,7 @@
         "id": "naruto_7_42",
         "title": "Those called Immortal",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 42 of Naruto Ocean Cut - Those called Immortal"
+        "overview": "Akatsuki Suppression arc - Those called Immortal"
       },
       {
         "season": 7,
@@ -363,7 +404,7 @@
         "id": "naruto_7_43",
         "title": "The Price of Power",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 43 of Naruto Ocean Cut - The Price of Power"
+        "overview": "Akatsuki Suppression arc - The Price of Power"
       },
       {
         "season": 8,
@@ -371,7 +412,7 @@
         "id": "naruto_8_44",
         "title": "The Serpent's Pupil",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 44 of Naruto Ocean Cut - The Serpent's Pupil"
+        "overview": "Hunt for the Traitor arc - The Serpent's Pupil"
       },
       {
         "season": 8,
@@ -379,7 +420,7 @@
         "id": "naruto_8_45",
         "title": "The Hunt",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 45 of Naruto Ocean Cut - The Hunt"
+        "overview": "Hunt for the Traitor arc - The Hunt"
       },
       {
         "season": 8,
@@ -387,7 +428,7 @@
         "id": "naruto_8_46",
         "title": "The Black Flames of Brotherhood",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 46 of Naruto Ocean Cut - The Black Flames of Brotherhood"
+        "overview": "Hunt for the Traitor arc - The Black Flames of Brotherhood"
       },
       {
         "season": 8,
@@ -395,7 +436,7 @@
         "id": "naruto_8_47",
         "title": "The Truth",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 47 of Naruto Ocean Cut - The Truth"
+        "overview": "Hunt for the Traitor arc - The Truth"
       },
       {
         "season": 9,
@@ -403,7 +444,7 @@
         "id": "naruto_9_48",
         "title": "Tales of a Gutsy Ninja",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 48 of Naruto Ocean Cut - Tales of a Gutsy Ninja"
+        "overview": "Jiraiya the Gallant arc - Tales of a Gutsy Ninja"
       },
       {
         "season": 9,
@@ -411,7 +452,7 @@
         "id": "naruto_9_49",
         "title": "Mystery Under The Rainclouds 1",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 49 of Naruto Ocean Cut - Mystery Under The Rainclouds 1"
+        "overview": "Jiraiya the Gallant arc - Mystery Under The Rainclouds 1"
       },
       {
         "season": 10,
@@ -419,7 +460,7 @@
         "id": "naruto_10_50",
         "title": "Wanderer",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 50 of Naruto Ocean Cut - Wanderer"
+        "overview": "Unleashed (OPTIONAL) arc - Wanderer"
       },
       {
         "season": 10,
@@ -427,7 +468,7 @@
         "id": "naruto_10_51",
         "title": "Master",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 51 of Naruto Ocean Cut - Master"
+        "overview": "Unleashed (OPTIONAL) arc - Master"
       },
       {
         "season": 11,
@@ -435,7 +476,7 @@
         "id": "naruto_11_52",
         "title": "Somber News",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 52 of Naruto Ocean Cut - Somber News"
+        "overview": "Pain arc - Somber News"
       },
       {
         "season": 11,
@@ -443,7 +484,7 @@
         "id": "naruto_11_53",
         "title": "Escalation",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 53 of Naruto Ocean Cut - Escalation"
+        "overview": "Pain arc - Escalation"
       },
       {
         "season": 11,
@@ -451,15 +492,15 @@
         "id": "naruto_11_54",
         "title": "Assault",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 54 of Naruto Ocean Cut - Assault"
+        "overview": "Pain arc - Assault"
       },
       {
         "season": 11,
         "episode": 55,
         "id": "naruto_11_55",
-        "title": "The Hero of the Leaf_1",
+        "title": "The Hero of the Leaf",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 55 of Naruto Ocean Cut - The Hero of the Leaf_1"
+        "overview": "Pain arc - The Hero of the Leaf"
       },
       {
         "season": 11,
@@ -467,7 +508,7 @@
         "id": "naruto_11_56",
         "title": "The Tale Of Naruto Uzumaki",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 56 of Naruto Ocean Cut - The Tale Of Naruto Uzumaki"
+        "overview": "Pain arc - The Tale Of Naruto Uzumaki"
       },
       {
         "season": 12,
@@ -475,7 +516,7 @@
         "id": "naruto_12_57",
         "title": "Rising Tensions",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 57 of Naruto Ocean Cut - Rising Tensions"
+        "overview": "Kage Summit arc - Rising Tensions"
       },
       {
         "season": 12,
@@ -483,7 +524,7 @@
         "id": "naruto_12_58",
         "title": "The Summit",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 58 of Naruto Ocean Cut - The Summit"
+        "overview": "Kage Summit arc - The Summit"
       },
       {
         "season": 12,
@@ -491,7 +532,7 @@
         "id": "naruto_12_59",
         "title": "Racing Minds",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 59 of Naruto Ocean Cut - Racing Minds"
+        "overview": "Kage Summit arc - Racing Minds"
       },
       {
         "season": 12,
@@ -499,7 +540,7 @@
         "id": "naruto_12_60",
         "title": "The Power of the Elder",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 60 of Naruto Ocean Cut - The Power of the Elder"
+        "overview": "Kage Summit arc - The Power of the Elder"
       },
       {
         "season": 12,
@@ -507,7 +548,7 @@
         "id": "naruto_12_61",
         "title": "High-Level Shinobi",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 61 of Naruto Ocean Cut - High-Level Shinobi"
+        "overview": "Kage Summit arc - High-Level Shinobi"
       },
       {
         "season": 12,
@@ -515,7 +556,7 @@
         "id": "naruto_12_62",
         "title": "Calm before the Storm",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 62 of Naruto Ocean Cut - Calm before the Storm"
+        "overview": "Kage Summit arc - Calm before the Storm"
       },
       {
         "season": 13,
@@ -523,7 +564,7 @@
         "id": "naruto_13_63",
         "title": "The Waterfall of Truth",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 63 of Naruto Ocean Cut - The Waterfall of Truth"
+        "overview": "Island of Purification arc - The Waterfall of Truth"
       },
       {
         "season": 13,
@@ -531,7 +572,7 @@
         "id": "naruto_13_64",
         "title": "The Nine-Tailed Fox",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 64 of Naruto Ocean Cut - The Nine-Tailed Fox"
+        "overview": "Island of Purification arc - The Nine-Tailed Fox"
       },
       {
         "season": 13,
@@ -539,7 +580,7 @@
         "id": "naruto_13_65",
         "title": "The Shark and the Angel",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 65 of Naruto Ocean Cut - The Shark and the Angel"
+        "overview": "Island of Purification arc - The Shark and the Angel"
       },
       {
         "season": 14,
@@ -547,7 +588,7 @@
         "id": "naruto_14_66",
         "title": "Alliance",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 66 of Naruto Ocean Cut - Alliance"
+        "overview": "The War arc - Alliance"
       },
       {
         "season": 14,
@@ -555,7 +596,7 @@
         "id": "naruto_14_67",
         "title": "War!",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 67 of Naruto Ocean Cut - War!"
+        "overview": "The War arc - War!"
       },
       {
         "season": 14,
@@ -563,7 +604,7 @@
         "id": "naruto_14_68",
         "title": "The First Enemy",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 68 of Naruto Ocean Cut - The First Enemy"
+        "overview": "The War arc - The First Enemy"
       },
       {
         "season": 14,
@@ -571,7 +612,7 @@
         "id": "naruto_14_69",
         "title": "Battle On The Beach",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 69 of Naruto Ocean Cut - Battle On The Beach"
+        "overview": "The War arc - Battle On The Beach"
       },
       {
         "season": 14,
@@ -579,7 +620,7 @@
         "id": "naruto_14_70",
         "title": "Golden Bonds",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 70 of Naruto Ocean Cut - Golden Bonds"
+        "overview": "The War arc - Golden Bonds"
       },
       {
         "season": 14,
@@ -587,7 +628,7 @@
         "id": "naruto_14_71",
         "title": "Nightfall",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 71 of Naruto Ocean Cut - Nightfall"
+        "overview": "The War arc - Nightfall"
       },
       {
         "season": 14,
@@ -595,7 +636,7 @@
         "id": "naruto_14_72",
         "title": "Company 3",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 72 of Naruto Ocean Cut - Company 3"
+        "overview": "The War arc - Company 3"
       },
       {
         "season": 15,
@@ -603,7 +644,7 @@
         "id": "naruto_15_73",
         "title": "The Acknowledged One",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 73 of Naruto Ocean Cut - The Acknowledged One"
+        "overview": "Naruto's Counterattack arc - The Acknowledged One"
       },
       {
         "season": 15,
@@ -611,7 +652,7 @@
         "id": "naruto_15_74",
         "title": "Reinforcements!",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 74 of Naruto Ocean Cut - Reinforcements!"
+        "overview": "Naruto's Counterattack arc - Reinforcements!"
       },
       {
         "season": 16,
@@ -619,7 +660,7 @@
         "id": "naruto_16_75",
         "title": "Madara Uchiha",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 75 of Naruto Ocean Cut - Madara Uchiha"
+        "overview": "Worst Case Scenario arc - Madara Uchiha"
       },
       {
         "season": 16,
@@ -627,7 +668,7 @@
         "id": "naruto_16_76",
         "title": "Tailed Beasts",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 76 of Naruto Ocean Cut - Tailed Beasts"
+        "overview": "Worst Case Scenario arc - Tailed Beasts"
       },
       {
         "season": 16,
@@ -635,7 +676,7 @@
         "id": "naruto_16_77",
         "title": "Eyes That See in the Dark",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 77 of Naruto Ocean Cut - Eyes That See in the Dark"
+        "overview": "Worst Case Scenario arc - Eyes That See in the Dark"
       },
       {
         "season": 16,
@@ -643,7 +684,7 @@
         "id": "naruto_16_78",
         "title": "I Will Love You, Always",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 78 of Naruto Ocean Cut - I Will Love You, Always"
+        "overview": "Worst Case Scenario arc - I Will Love You, Always"
       },
       {
         "season": 16,
@@ -651,7 +692,7 @@
         "id": "naruto_16_79",
         "title": "Unmasked",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 79 of Naruto Ocean Cut - Unmasked"
+        "overview": "Worst Case Scenario arc - Unmasked"
       },
       {
         "season": 17,
@@ -659,7 +700,7 @@
         "id": "naruto_17_80",
         "title": "Hell",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 80 of Naruto Ocean Cut - Hell"
+        "overview": "Hell arc - Hell"
       },
       {
         "season": 17,
@@ -667,7 +708,7 @@
         "id": "naruto_17_81",
         "title": "Allied Resolve",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 81 of Naruto Ocean Cut - Allied Resolve"
+        "overview": "Hell arc - Allied Resolve"
       },
       {
         "season": 17,
@@ -675,7 +716,7 @@
         "id": "naruto_17_82",
         "title": "The All-Knowing",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 82 of Naruto Ocean Cut - The All-Knowing"
+        "overview": "Hell arc - The All-Knowing"
       },
       {
         "season": 17,
@@ -683,7 +724,7 @@
         "id": "naruto_17_83",
         "title": "The New Sannin",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 83 of Naruto Ocean Cut - The New Sannin"
+        "overview": "Hell arc - The New Sannin"
       },
       {
         "season": 17,
@@ -691,7 +732,7 @@
         "id": "naruto_17_84",
         "title": "Kakashi's Phantom",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 84 of Naruto Ocean Cut - Kakashi's Phantom"
+        "overview": "Hell arc - Kakashi's Phantom"
       },
       {
         "season": 17,
@@ -699,7 +740,7 @@
         "id": "naruto_17_85",
         "title": "The Heart",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 85 of Naruto Ocean Cut - The Heart"
+        "overview": "Hell arc - The Heart"
       },
       {
         "season": 17,
@@ -707,7 +748,7 @@
         "id": "naruto_17_86",
         "title": "A True Ending",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 86 of Naruto Ocean Cut - A True Ending"
+        "overview": "Hell arc - A True Ending"
       },
       {
         "season": 18,
@@ -715,7 +756,7 @@
         "id": "naruto_18_87",
         "title": "The Traitor and the Beast",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 87 of Naruto Ocean Cut - The Traitor and the Beast"
+        "overview": "Realm of Infinity arc - The Traitor and the Beast"
       },
       {
         "season": 18,
@@ -723,7 +764,7 @@
         "id": "naruto_18_88",
         "title": "World Of Dreams",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 88 of Naruto Ocean Cut - World Of Dreams"
+        "overview": "Realm of Infinity arc - World Of Dreams"
       },
       {
         "season": 19,
@@ -731,7 +772,7 @@
         "id": "naruto_19_89",
         "title": "She, Of The Beginning",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 89 of Naruto Ocean Cut - She, Of The Beginning"
+        "overview": "Finale arc - She, Of The Beginning"
       },
       {
         "season": 19,
@@ -739,7 +780,7 @@
         "id": "naruto_19_90",
         "title": "Those Who Inherit The Future",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 90 of Naruto Ocean Cut - Those Who Inherit The Future"
+        "overview": "Finale arc - Those Who Inherit The Future"
       },
       {
         "season": 19,
@@ -747,7 +788,7 @@
         "id": "naruto_19_91",
         "title": "Ninja",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 91 of Naruto Ocean Cut - Ninja"
+        "overview": "Finale arc - Ninja"
       },
       {
         "season": 20,
@@ -755,7 +796,7 @@
         "id": "naruto_20_1",
         "title": "The Strategist",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 1 of Naruto Ocean Cut - The Strategist"
+        "overview": "Epilogue (WIP) arc - The Strategist"
       },
       {
         "season": 20,
@@ -763,7 +804,7 @@
         "id": "naruto_20_2",
         "title": "The Last",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 2 of Naruto Ocean Cut - The Last"
+        "overview": "Epilogue (WIP) arc - The Last"
       },
       {
         "season": 20,
@@ -771,7 +812,15 @@
         "id": "naruto_20_3",
         "title": "The Wanderer",
         "released": "2022-04-13T00:00:00.000Z",
-        "overview": "Episode 3 of Naruto Ocean Cut - The Wanderer"
+        "overview": "Epilogue (WIP) arc - The Wanderer"
+      },
+      {
+        "season": 20,
+        "episode": 4,
+        "id": "naruto_20_4",
+        "title": "The Final Episode",
+        "released": "2022-04-13T00:00:00.000Z",
+        "overview": "Epilogue (WIP) arc - The Final Episode"
       }
     ]
   }

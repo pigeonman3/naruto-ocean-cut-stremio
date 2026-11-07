@@ -46,7 +46,7 @@ The `netlify.toml` file in your project root already contains all necessary sett
 
 - **Build command**: None (static site)
 - **Publish directory**: `.` (root directory)
-- **Node version**: 18
+- **Node version**: 22 (via `.nvmrc`)
 
 ### Manual Configuration (if needed)
 

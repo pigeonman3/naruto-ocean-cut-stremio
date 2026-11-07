@@ -2,8 +2,6 @@
   # No build command needed - this is a static site with JSON files
   publish = "."
   
-[build.environment]
-  NODE_VERSION = "18"
 
 [[headers]]
   # Apply CORS headers to all JSON files for Stremio to access them
@@ -22,8 +20,11 @@
     Cache-Control = "public, max-age=300"
 
 [[redirects]]
-  # Ensure clean URLs work
-  from = "/*"
-  to = "/index.html"
+  # Stremio requests search/pagination as /catalog/series/narutooc_catalog/search=....json.
+  # There is only one show, so always return the catalog.
+  from = "/catalog/series/narutooc_catalog/*"
+  to = "/catalog/series/narutooc_catalog.json"
   status = 200
-  force = false
+
+# Note: no SPA catch-all. Unknown addon paths must 404 instead of returning
+# index.html, which Stremio cannot parse as JSON.
