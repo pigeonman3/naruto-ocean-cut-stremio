@@ -1,6 +1,6 @@
 {
   "id": "com.narutooc.stremio",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "name": "Naruto Ocean Cut",
   "description": "Fan-edited version of Naruto (2002) with no filler, streamlined pacing, and improved flow. English dub.",
   "logo": "https://i.imgur.com/JprF6ks.png",
@@ -10,12 +10,27 @@
       "name": "meta",
       "types": [
         "series"
+      ],
+      "idPrefixes": [
+        "narutooc"
       ]
     },
-    "stream"
+    {
+      "name": "stream",
+      "types": [
+        "series"
+      ],
+      "idPrefixes": [
+        "naruto_"
+      ]
+    }
   ],
   "types": [
     "series"
+  ],
+  "idPrefixes": [
+    "narutooc",
+    "naruto_"
   ],
   "catalogs": [
     {

@@ -1,8 +1,23 @@
 {
   "streams": [
     {
+      "name": "Ocean Cut",
+      "title": "SPECIAL #1 - Inari's Test of Courage.mp4\n🌊 Naruto Ocean Cut · English dub",
       "infoHash": "e0c38ede05e555d337e7d534f4eaaebc773bf913",
-      "fileIdx": 2
+      "fileIdx": 7,
+      "sources": [
+        "tracker:udp://tracker.opentrackr.org:1337/announce",
+        "tracker:udp://open.stealth.si:80/announce",
+        "tracker:udp://tracker.torrent.eu.org:451/announce",
+        "tracker:udp://exodus.desync.com:6969/announce",
+        "tracker:udp://open.demonii.com:1337/announce",
+        "tracker:udp://tracker.dler.org:6969/announce",
+        "dht:e0c38ede05e555d337e7d534f4eaaebc773bf913"
+      ],
+      "behaviorHints": {
+        "bingeGroup": "narutooc-oceancut",
+        "filename": "SPECIAL #1 - Inari's Test of Courage.mp4"
+      }
     }
   ]
 }
